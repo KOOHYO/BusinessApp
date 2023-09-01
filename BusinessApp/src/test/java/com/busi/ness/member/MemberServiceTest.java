@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 
 
-//@SpringBootTest
+@SpringBootTest
 public class MemberServiceTest {
 
 	@Autowired
@@ -21,14 +21,14 @@ public class MemberServiceTest {
 	@Autowired
 	private MemberMapper memberMapper;
 	
-//	@Test
+	@Test
 	void getList() throws Exception {
 		
-//		MemberVO memberVO = new MemberVO();
-//		memberVO.setEmpNo("test1");
-//		memberVO = memberMapper.getList(memberVO);
-//		
-//		assertNotNull(memberVO);
+		MemberVO memberVO = new MemberVO();
+		memberVO.setEmpNo("test1");
+		memberVO = memberMapper.getList(memberVO);
+		
+		assertNotNull(memberVO);
 		
 	}
 	

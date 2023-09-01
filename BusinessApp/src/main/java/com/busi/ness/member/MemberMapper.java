@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MemberMapper {
 
-	public Map<String, Object> getList(Map<String, Object> string)throws Exception;
+	public MemberVO getList(MemberVO memberVO)throws Exception;
 	
 }

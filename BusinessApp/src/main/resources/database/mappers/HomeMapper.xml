@@ -4,7 +4,7 @@
     
  <mapper namespace="com.busi.ness.member.MemberMapper">
  
- 	<select id="getList" parameterType="map" resultType="map">
+ 	<select id="getList" parameterType="MemberVO" resultType="MemberVO">
  		SELECT * FROM EMPLOYEE WHERE EMP_NO = #{empNo}
  	</select>
  	

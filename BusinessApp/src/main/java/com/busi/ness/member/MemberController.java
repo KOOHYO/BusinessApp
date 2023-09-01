@@ -35,12 +35,12 @@ public class MemberController {
 		
 //		rtnObj.put("멤버리스트", memberVO);
 		
-		Map<String, Object> resultMap = new HashMap<String, Object>();
-		resultMap = memService.getList(memberVO);
+//		Map<String, Object> resultMap = new HashMap<String, Object>();
+		memberVO = memService.getList(memberVO);
 		
-		log.info("=======> 멤버 리스트"+resultMap);
+		log.info("=======> 멤버 리스트"+memberVO);
 		
-		rtnObj.put("멤버리스트", resultMap);
+		rtnObj.put("멤버리스트", memberVO);
 		
 		
 		return rtnObj;

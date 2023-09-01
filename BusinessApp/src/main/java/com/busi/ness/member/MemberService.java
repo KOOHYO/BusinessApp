@@ -13,12 +13,8 @@ public class MemberService {
 	@Autowired
 	private MemberMapper memberMapper;
 	
-	public Map<String, Object> getList(MemberVO memberVO) throws Exception {
-		
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("empNo", memberVO.getEmpNo());
-		
-		return memberMapper.getList(map);
+	public MemberVO getList(MemberVO memberVO) throws Exception {
+		return memberMapper.getList(memberVO);
 		
 	}
 	
