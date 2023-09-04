@@ -53,7 +53,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("/join")
-	public ModelAndView getJoin()throws Exception{
+	public ModelAndView setJoin()throws Exception{
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("Join");

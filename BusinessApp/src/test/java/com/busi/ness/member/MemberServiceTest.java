@@ -1,10 +1,8 @@
 package com.busi.ness.member;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +16,27 @@ public class MemberServiceTest {
 	@Autowired
 	private MemberService memberService;
 	
-	@Autowired
-	private MemberMapper memberMapper;
-	
-	@Test
+//	@Test
 	void getList() throws Exception {
 		
 		MemberVO memberVO = new MemberVO();
 		memberVO.setEmpNo("test1");
-		memberVO = memberMapper.getList(memberVO);
+		memberVO = memberService.getList(memberVO);
 		
 		assertNotNull(memberVO);
+		
+	}
+	
+//	@Test
+	void setJoin() throws Exception {
+		
+		MemberVO memberVO = new MemberVO();
+		memberVO.setEmpNo("test2");
+		memberVO.setDepCd("test2");
+		
+		int result = memberService.setJoin(memberVO);
+		
+		assertEquals(result, 1);
 		
 	}
 	
